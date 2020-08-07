@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>My First HTML</title>
+    <style>
+        .container{
+            margin: auto auto;
+            width: 50%;
+        }
+        #signupDiv{
+            display: flex;
+            flex-direction: column;
+        }
+        div {
+            margin: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Container Start  -->
+    <div class="container">
+        <div id="signupDiv">
+            <!-- Signup Form -->
+            <form id="signupForm">
+                <h2>Sign Up Here!!!</h2>
+                <div>
+                    <label for="username">Enter UserName:</label>
+                    <input type="text"  placeholder="Enter Username" id="username"></input>
+                </div>  
+                <div>
+                    <label for="userpwd">Enter Password:</label>
+                    <input type="password" placeholder="Enter Password" id="userpwd"></input>
+                </div>    
+                <div>
+                    <label for="mobileno">Enter Mobile Number:</label>
+                    <input type="number" placeholder="Enter Mobile number" id="mobileno"></input>
+                </div>
+                <div>
+                    <label for="useremail">Enter User Email:</label>
+                    <input type="email" placeholder="Enter Email Id" id="useremail"></input>
+                </div>
+                <div>
+                    <input type="submit" value="Register"/>
+                </div>
+                
+            </form>
+        </div>
+        <div class="logindiv">
+            <!-- Login Form -->
+        </div>
+    </div>
+    <!-- Container End -->
+</body>
+
+</html>
