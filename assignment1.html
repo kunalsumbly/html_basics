@@ -4,21 +4,47 @@
 <head>
     <title>My First HTML</title>
     <style>
-        .container{
+        .container {
             margin: auto auto;
             width: 50%;
             display: flex;
             flex-direction: row;
         }
-        #signupDiv{
+
+        #signupDiv,
+        #loginDiv {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
+
         div {
             margin: 10px;
         }
-        .verticalSeparator{
+
+        .verticalSeparator {
             border: 1px solid grey;
+        }
+
+        .labels {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputFields {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .inputFields input,
+        .labels label {
+            margin: 5px 0;
+        }
+
+        .buttons{
+            margin-left: 20px;
+        }
+        h2{
+            margin-left: 20px;
         }
     </style>
 
@@ -27,46 +53,45 @@
 <body>
     <!-- Container Start  -->
     <div class="container">
-        <div id="signupDiv">
-            <!-- Signup Form -->
-            <form id="signupForm">
-                <h2>Sign Up Here!!!</h2>
-                <div>
+        <!-- Signup Form -->
+        <div id="signup">
+            <h2>Sign Up Here!!!</h2>
+            <div id="signupDiv">
+                <div class="labels">
                     <label for="username">Enter UserName:</label>
-                    <input type="text"  placeholder="Enter Username" id="username"></input>
-                </div>  
-                <div>
                     <label for="userpwd">Enter Password:</label>
-                    <input type="password" placeholder="Enter Password" id="userpwd"></input>
-                </div>    
-                <div>
                     <label for="mobileno">Enter Mobile Number:</label>
-                    <input type="number" placeholder="Enter Mobile number" id="mobileno"></input>
-                </div>
-                <div>
                     <label for="useremail">Enter User Email:</label>
+                </div>
+                <div class="inputFields">
+                    <input type="text" placeholder="Enter Username" id="username"></input>
+                    <input type="password" placeholder="Enter Password" id="userpwd"></input>
+                    <input type="number" placeholder="Enter Mobile number" id="mobileno"></input>
                     <input type="email" placeholder="Enter Email Id" id="useremail"></input>
                 </div>
-                <div>
-                    <input type="submit" value="Register"/>
-                </div>
-                
-            </form>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Register" />
+            </div>
+
         </div>
+
         <div class="verticalSeparator"></div>
-        <div class="logindiv">
-            <!-- Login Form -->
+        <!-- Login Form -->
+        <div id="login">
             <h2>Login Here!!!</h2>
-            <div> 
-                <label for="username">Enter UserName:</label>
-                <input type="text"  placeholder="Enter Username" id="username"></input>
+            <div id="loginDiv">
+                <div class="labels">
+                    <label for="username">Enter UserName:</label>
+                    <label for="userpwd">Enter Password:</label>
+                </div>
+                <div class="inputFields">
+                    <input type="text" placeholder="Enter Username" id="username"></input>
+                    <input type="password" placeholder="Enter Password" id="userpwd"></input>
+                </div>
             </div>
-            <div>
-                <label for="userpwd">Enter Password:</label>
-                <input type="password" placeholder="Enter Password" id="userpwd"></input>
-            </div>
-            <div>
-                <input type="submit" value="Login"/>
+            <div class="buttons">
+                <input type="submit" value="Login" />
             </div>
         </div>
     </div>
