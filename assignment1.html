@@ -7,6 +7,8 @@
         .container{
             margin: auto auto;
             width: 50%;
+            display: flex;
+            flex-direction: row;
         }
         #signupDiv{
             display: flex;
@@ -14,6 +16,9 @@
         }
         div {
             margin: 10px;
+        }
+        .verticalSeparator{
+            border: 1px solid grey;
         }
     </style>
 
@@ -48,8 +53,21 @@
                 
             </form>
         </div>
+        <div class="verticalSeparator"></div>
         <div class="logindiv">
             <!-- Login Form -->
+            <h2>Login Here!!!</h2>
+            <div> 
+                <label for="username">Enter UserName:</label>
+                <input type="text"  placeholder="Enter Username" id="username"></input>
+            </div>
+            <div>
+                <label for="userpwd">Enter Password:</label>
+                <input type="password" placeholder="Enter Password" id="userpwd"></input>
+            </div>
+            <div>
+                <input type="submit" value="Login"/>
+            </div>
         </div>
     </div>
     <!-- Container End -->
